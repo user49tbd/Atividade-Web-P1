@@ -250,9 +250,9 @@
 
     <script>
         document.querySelector("form").onsubmit = function (event) {
-            event.preventDefault(); // Impede o envio padrão do formulário
-            const action = event.submitter.value; // Obtém o valor do botão que foi clicado
-            let id = document.querySelector("#id").value.trim(); // Remove espaços extras
+            event.preventDefault();
+            const action = event.submitter.value;
+            let id = document.querySelector("#id").value.trim();
 
             console.log("O ID é: " + id);
             console.log("Ação selecionada: " + action);
