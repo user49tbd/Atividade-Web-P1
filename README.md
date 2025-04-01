@@ -68,11 +68,11 @@ Durante o desenvolvimento, algumas dificuldades foram enfrentadas:
 
 ## Referências Utilizadas
 
-- Documentação oficial do Node.js
+- [Documentação oficial do Node.js](https://nodejs.org/docs/latest/api/)
 
-- Express.js - Framework para Node.js
+- [Express.js - Framework para Node.js](https://expressjs.com/en/5x/api.html)
 
-- EJS - Templates para JavaScript
+- [EJS - Templates para JavaScript](https://ejs.co/#docs)
 
 ## Endpoints
 ### Produto
