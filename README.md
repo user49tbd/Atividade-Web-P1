@@ -5,14 +5,14 @@
 Esta aplicação foi desenvolvida seguindo a arquitetura MVC (Model-View-Controller), garantindo uma estrutura organizada e de fácil manutenção. O projeto inclui dois CRUDs: um para a gestão de produtos e outro para o gerenciamento de usuários.
 
 A estrutura do projeto está organizada em pastas conforme o padrão MVC:
+| pasta | descricao |
+| Views | Contém os arquivos EJS, responsáveis pelo front-end.|
 
-Views: Contém os arquivos EJS, responsáveis pelo front-end.
+| Config | Contém a configuração do banco de dados.|
 
-Config: Contém a configuração do banco de dados.
+| Controllers | Responsáveis por executar os comandos SQL. |
 
-Controllers: Responsáveis por executar os comandos SQL.
-
-Routes: Contém os endpoints da API, lidando com as requisições e respostas.
+| Routes | Contém os endpoints da API, lidando com as requisições e respostas. |
 
 ```
 📦 projeto-mvc
