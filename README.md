@@ -14,7 +14,7 @@ Controllers: Responsáveis por executar os comandos SQL.
 
 Routes: Contém os endpoints da API, lidando com as requisições e respostas.
 
-'''
+```
 📦 projeto-mvc
 ├── 📂 config
 │   ├── db.js
@@ -42,7 +42,7 @@ Routes: Contém os endpoints da API, lidando com as requisições e respostas.
 │   ├── script.js
 ├── server.js
 ├── package.json
-'''
+```
 
 ## Implementação do MVC
 
