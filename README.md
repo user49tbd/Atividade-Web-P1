@@ -5,7 +5,7 @@
 Esta aplicação foi desenvolvida seguindo a arquitetura MVC (Model-View-Controller), garantindo uma estrutura organizada e de fácil manutenção. O projeto inclui dois CRUDs: um para a gestão de produtos e outro para o gerenciamento de usuários.
 
 A estrutura do projeto está organizada em pastas conforme o padrão MVC:
-| Pasta | Descrição |
+| **Pasta** | **Descrição** |
 |:-----:|:---------------------------------------------------:|
 | Views | Contém os arquivos EJS, responsáveis pelo front-end.|
 | Config | Contém a configuração do banco de dados.|
