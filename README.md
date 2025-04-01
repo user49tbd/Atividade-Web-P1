@@ -6,6 +6,7 @@ Esta aplicação foi desenvolvida seguindo a arquitetura MVC (Model-View-Control
 
 A estrutura do projeto está organizada em pastas conforme o padrão MVC:
 | pasta | descricao |
+|:---:|:---:|
 | Views | Contém os arquivos EJS, responsáveis pelo front-end.|
 
 | Config | Contém a configuração do banco de dados.|
