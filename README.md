@@ -74,3 +74,27 @@ Durante o desenvolvimento, algumas dificuldades foram enfrentadas:
 
 - EJS - Templates para JavaScript
 
+## Endpoints
+### Produto
+- GET /produtos: Retornar todos os produtos.
+  ![getAll](https://github.com/user-attachments/assets/2b1b1e58-a56f-40dd-9256-e99847f02583)
+- GET /produtos/{id}: Retornar o produto com o ID especificado.
+  ![get](https://github.com/user-attachments/assets/b33966f9-f5cc-4c5b-bb8a-ef933dc072a6)
+- POST /produtos: Criar um novo produto (com validação de campos).
+  ![create](https://github.com/user-attachments/assets/0d3d415a-2504-4f6f-b4e9-1be63d0c2840)
+- PUT /produtos/{id}: Atualizar os dados de um produto existente (com validação de campos).
+  ![put](https://github.com/user-attachments/assets/f8d27302-3b58-4938-99ae-9969b9cc9ab2)
+- DELETE /produtos/{id}: Excluir o produto com o ID especificado.
+  ![delete](https://github.com/user-attachments/assets/e9bf5ede-dcc3-4fe6-90b5-9f2616540a3c)
+### Usuário
+- GET /usuarios: Retornar todos os usuarios.
+  ![getAllU](https://github.com/user-attachments/assets/56231907-1a6b-4193-9474-4087d39da17b)
+- GET /usuarios/{id}: Retornar o usuario com o ID especificado.
+  ![getU](https://github.com/user-attachments/assets/1db07e1d-d321-4861-8a21-b40eb5a02891)
+- POST /usuarios: Criar um novo usuario (com validação de campos).
+  ![criateU](https://github.com/user-attachments/assets/06b974a8-0e72-45bc-92e5-c5c1764b0db1)
+- PUT /usuarios/{id}: Atualizar os dados de um usuario existente (com validação de campos).
+  ![updateU](https://github.com/user-attachments/assets/ca4ac599-3ac8-4226-aad9-081fdf78b218)
+- DELETE /usuarios/{id}: Excluir o usuario com o ID especificado.
+  ![deleteU](https://github.com/user-attachments/assets/16522baa-dded-4e8b-92e3-712d6fd6f587)
+
