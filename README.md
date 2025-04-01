@@ -14,6 +14,36 @@ Controllers: Responsáveis por executar os comandos SQL.
 
 Routes: Contém os endpoints da API, lidando com as requisições e respostas.
 
+'''
+📦 projeto-mvc
+├── 📂 config
+│   ├── db.js
+├── 📂 controllers
+│   ├── homeController.js
+│   ├── produtoController.js
+│   ├── usuarioController.js
+├── 📂 models
+│   ├── produtoModel.js
+│   ├── usuarioModel.js
+├── 📂 routes
+│   ├── homeRoutes.js
+│   ├── produtoRoutes.js
+│   ├── usuarioRoutes.js
+├── 📂 views
+│   ├── 📂 partials
+│        ├── header.ejs
+│   ├── 📂 Produto
+│        ├── produto.ejs
+│   ├── 📂 Usuario
+│        ├── usuario.ejs
+│   ├── index.ejs
+├── 📂 public
+│   ├── styles.css
+│   ├── script.js
+├── server.js
+├── package.json
+'''
+
 ## Implementação do MVC
 
 O MVC foi aplicado para garantir uma separação clara das responsabilidades:
