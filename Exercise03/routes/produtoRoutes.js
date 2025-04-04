@@ -3,8 +3,7 @@ import { index, buscar, listar, criar, atualizar, deletar } from "../controllers
 
 const router = express.Router();
 
-// Definição das rotas
-router.get("/", index); // Página inicial dos produtos (opcional)
+router.get("/", index);
 router.get("/produtos", listar);
 router.get("/produtos/:id", buscar);
 router.post("/produtos", criar);

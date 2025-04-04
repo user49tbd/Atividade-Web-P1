@@ -97,4 +97,3 @@ Durante o desenvolvimento, algumas dificuldades foram enfrentadas:
   ![updateU](https://github.com/user-attachments/assets/ca4ac599-3ac8-4226-aad9-081fdf78b218)
 - DELETE /usuarios/{id}: Excluir o usuario com o ID especificado.
   ![deleteU](https://github.com/user-attachments/assets/16522baa-dded-4e8b-92e3-712d6fd6f587)
-

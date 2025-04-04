@@ -3,7 +3,6 @@ const router = express.Router();
 import {index, buscar, listar, criar, atualizar, deletar} from "../controllers/usuarioController.js"
 
 router.get('/',index)
-router.get("/", index); // Página inicial dos produtos (opcional)
 router.get("/usuarios", listar);
 router.get("/usuarios/:id", buscar);
 router.post("/usuarios", criar);
