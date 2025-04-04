@@ -1,17 +1,8 @@
 # Atividade-Web P1
 
-## Desenvolvimento da Aplicação
+## 🧱 Desenvolvimento da Aplicação
 
 Esta aplicação foi desenvolvida seguindo a arquitetura MVC (Model-View-Controller), garantindo uma estrutura organizada e de fácil manutenção. O projeto inclui dois CRUDs: um para a gestão de produtos e outro para o gerenciamento de usuários.
-
-A estrutura do projeto está organizada em pastas conforme o padrão MVC:
-| **Pasta**  | **Descrição**  |
-|:---------:|:---------------------------------------------------:|
-| Views     | Contém os arquivos EJS, responsáveis pelo front-end. |
-| Config    | Contém a configuração do banco de dados. |
-| Controllers | Responsáveis por executar os comandos SQL. |
-| Routes    | Contém os endpoints da API, lidando com as requisições e respostas. |
-| Models    | Define a estrutura dos dados e interage com o banco de dados. |
 
 ```
 📦 projeto-mvc
@@ -39,8 +30,40 @@ A estrutura do projeto está organizada em pastas conforme o padrão MVC:
 ├── server.js
 ├── package.json
 ```
+A estrutura do projeto está organizada em pastas conforme o padrão MVC:
 
-## Implementação do MVC
+<table style="width:100%;">
+  <thead>
+    <tr>
+      <th>Pasta</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Views</td>
+      <td>Contém os arquivos EJS, responsáveis pelo front-end.</td>
+    </tr>
+    <tr>
+      <td>Config</td>
+      <td>Contém a configuração do banco de dados.</td>
+    </tr>
+    <tr>
+      <td>Controllers</td>
+      <td>Responsáveis por executar os comandos SQL.</td>
+    </tr>
+    <tr>
+      <td>Routes</td>
+      <td>Contém os endpoints da API, lidando com as requisições e respostas.</td>
+    </tr>
+    <tr>
+      <td>Models</td>
+      <td>Define a estrutura dos dados e interage com o banco de dados.</td>
+    </tr>
+  </tbody>
+</table>
+
+## 📚 Implementação do MVC
 
 O MVC foi aplicado para garantir uma separação clara das responsabilidades:
 
@@ -50,7 +73,7 @@ O MVC foi aplicado para garantir uma separação clara das responsabilidades:
 
 - Controller: Contém a lógica de negócio e manipulação dos dados entre o Model e a View.
 
-## Validação de Campos
+## ✅ Validação de Campos
 
 - No front-end, utilizamos atributos HTML como type="email" para validar automaticamente e-mails e minlength para verificar o tamanho mínimo dos campos.
 
@@ -58,7 +81,7 @@ O MVC foi aplicado para garantir uma separação clara das responsabilidades:
 
 - Para operações que requerem um ID, o sistema utiliza querySelectorAll para obter o campo correspondente e verifica se ele está preenchido. Caso contrário, um alerta é exibido ao usuário.
 
-## Dificuldades Encontradas e Soluções
+## ⚠️ Dificuldades Encontradas e Soluções
 
 Durante o desenvolvimento, algumas dificuldades foram enfrentadas:
 
@@ -77,13 +100,13 @@ Durante o desenvolvimento, algumas dificuldades foram enfrentadas:
 ## Configuração
 
 1. **MySQL:**
-    * Instale o MySQL e crie o banco `AtividadeWebP1_DB`.
+    - Instale o MySQL e crie o banco `AtividadeWebP1_DB`.
 
 2. **Projeto:**
-    * Clone o repositório.
-    * `cd AtividadeWebP1`
-    * `npm install`
-    * Crie `.env` com:
+    - Clone o repositório.
+    - `cd AtividadeWebP1`
+    - `npm install`
+    - Crie `.env` com:
       ```dotenv
         DB_HOST=localhost
         DB_USER=root
@@ -92,10 +115,10 @@ Durante o desenvolvimento, algumas dificuldades foram enfrentadas:
       ```
 
 3.  **Execução:**
-    * `npm run start`
-    * Acesse `http://127.0.0.1:3000`.
+    - `npm run start`
+    - Acesse `http://127.0.0.1:3000`.
 
-## Referências Utilizadas
+## 📚 Referências Utilizadas
 
 - [Documentação oficial do Node.js](https://nodejs.org/docs/latest/api/)
 
@@ -103,7 +126,7 @@ Durante o desenvolvimento, algumas dificuldades foram enfrentadas:
 
 - [EJS - Templates para JavaScript](https://ejs.co/#docs)
 
-## Endpoints
+## 📝 Endpoints
 ### Produto
 - GET /produtos: Retornar todos os produtos.
   ![getAll](https://github.com/user-attachments/assets/2b1b1e58-a56f-40dd-9256-e99847f02583)
@@ -126,3 +149,7 @@ Durante o desenvolvimento, algumas dificuldades foram enfrentadas:
   ![updateU](https://github.com/user-attachments/assets/ca4ac599-3ac8-4226-aad9-081fdf78b218)
 - DELETE /usuarios/{id}: Excluir o usuario com o ID especificado.
   ![deleteU](https://github.com/user-attachments/assets/16522baa-dded-4e8b-92e3-712d6fd6f587)
+
+## 📌 Autores
+**- Jonathan Moura Andrade**
+**- Kaik Silva Sousa**
