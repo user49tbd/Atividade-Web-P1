@@ -152,4 +152,5 @@ Durante o desenvolvimento, algumas dificuldades foram enfrentadas:
 
 ## 📌 Autores
 **- Jonathan Moura Andrade**
+
 **- Kaik Silva Sousa**
