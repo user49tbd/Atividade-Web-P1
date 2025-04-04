@@ -66,6 +66,35 @@ Durante o desenvolvimento, algumas dificuldades foram enfrentadas:
 
 - Integração com o banco de dados: Algumas consultas apresentavam erros de sintaxe. Utilizamos console.log e testes unitários para depurar e corrigir os problemas.
 
+## 🚀 Como Rodar o Projeto
+
+## Pré-requisitos
+
+* [Node.js](https://nodejs.org/) (versão 14+)
+* [npm](https://www.npmjs.com/)
+* [MySQL Server](https://dev.mysql.com/downloads/mysql/) (versão 8.0+)
+
+## Configuração
+
+1. **MySQL:**
+    * Instale o MySQL e crie o banco `AtividadeWebP1_DB`.
+
+2. **Projeto:**
+    * Clone o repositório.
+    * `cd AtividadeWebP1`
+    * `npm install`
+    * Crie `.env` com:
+      ```dotenv
+        DB_HOST=localhost
+        DB_USER=root
+        DB_PASSWORD=sua_senha_do_root
+        DB_DATABASE=AtividadeWebP1_DB
+      ```
+
+3.  **Execução:**
+    * `npm run start`
+    * Acesse `http://127.0.0.1:3000`.
+
 ## Referências Utilizadas
 
 - [Documentação oficial do Node.js](https://nodejs.org/docs/latest/api/)
