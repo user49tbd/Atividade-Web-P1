@@ -1,251 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-            padding: 0px;
-            margin: 0px;
-            border: 0px;
-            box-sizing: border-box;
-        }
+    <title>Web 2 - CRUD Produto</title>
 
-        .Container,
-        .content,
-        form,
-        .fields,
-        .inputLst,
-        .titleF,
-        .formC,
-        .lstBtn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .Container {
-            width: 100%;
-            flex-direction: column;
-        }
-
-        .content {
-            padding-top: 20px;
-            width: 100%;
-            height: 100%;
-            flex-direction: column;
-            overflow-x: auto;
-        }
-
-        form {
-            justify-content: flex-start !important;
-            width: 50%;
-            min-height: 70%;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .fields {
-            width: 100%;
-            height: 20px;
-        }
-
-        .fields>* {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            gap: 10px;
-        }
-
-        .fields>*:nth-child(1) {
-            width: 60px;
-            justify-content: flex-start !important;
-        }
-
-        .fields>*:nth-child(2) {
-            width: 100%;
-            outline: none;
-            border-bottom: 1px solid black;
-        }
-
-        .inputLst {
-            width: 100%;
-            height: 30px;
-            gap: 20px;
-        }
-
-        textarea {
-            height: 30%;
-            width: 100%;
-            resize: none;
-            outline: none;
-            border: 1px solid black;
-            border-radius: 5px;
-        }
-
-        .titleF {
-            background-color: black;
-            width: 100%;
-            height: 70px;
-        }
-
-        .titleF>h3 {
-            font-size: 60px;
-            text-transform: uppercase;
-            color: white;
-        }
-
-        .formC {
-            gap: 10px;
-            width: 100%;
-            height: 100%;
-            flex-direction: column;
-            padding: 20px;
-        }
-
-        input[type="submit"] {
-            width: 100%;
-            height: 100%;
-            border-radius: 5px;
-            border: 1px solid black;
-            color: white;
-            background-color: black;
-            text-transform: uppercase;
-            transition: 1s;
-        }
-
-        input[type="submit"]:hover {
-            background-color: white;
-            color: black;
-        }
-
-        .lstBtn {
-            width: 100%;
-            height: 30%;
-            gap: 10px;
-        }
-        table{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 70%;
-            table-layout: fixed;
-            flex-direction: column;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.5);
-            margin-bottom: 20px;
-        }
-        thead{
-            color: white;
-            background-color: black;
-        }
-        th,tr,td,tbody,thead{
-            height: 100%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        tbody{
-            flex-direction: column;
-        }
-        tr{
-            height: 30px !important;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
-
 <body>
-    <div class="Container">
-        <%- include('../partials/header.ejs', { title: 'Página Inicial' }) %>
+    <%- include('../partials/header.ejs') %>
 
-        <div class="content">
-            <form>
-                <div class="titleF">
-                    <h3>Produto</h3>
-                </div>
-                
-                <div class="formC">
-                    <div class="fields">
-                        <label for="id">ID</label>
-                        <input type="number" name="id" id="id"
-                        value="<%= produto.id ? produto.id : '' %>"
-                        >
-                    </div>
-                    
-                    <div class="fields">
-                        <label for="nome">Nome</label>
-                        <input type="text" name="nome" id="nome" minlength="4"
-                        value="<%= produto.nome ? produto.nome : '' %>"
-                        >
-                        
-                    </div>
+    <div class="container">
+        <form>
+            <div class="titleF">
+                <h3>Produto</h3>
+            </div>
 
-                    <div class="inputLst">
-                        <div class="fields">
-                            <label for="preco">Preço</label>
-                            <input type="number" min="0" name="preco" id="preco"
-                            value="<%= produto.preco ? produto.preco : '' %>"
-                            >
-                        </div>
-                        
-                        <div class="fields">
-                            <label for="estoque">Estoque</label>
-                            <input type="number" min="0" step="1" name="estoque" id="estoque"
-                            value="<%= produto.estoque ? produto.estoque : '' %>"
-                            >
-                        </div>
-                    </div>
-
-                    <textarea name="description" id="description" style="padding: 0; margin: 0"
-                    placeholder="Digite a descrição do produto..."
-                    ><%= produto.description ? produto.description : '' %></textarea>
-
-                    <!-- Campo oculto para method-override -->
-                    <input type="hidden" name="_method" id="method">
-
-                    <div class="lstBtn">
-                        <input type="submit" value="Listar" name="action">
-                        <input type="submit" value="Buscar" name="action">
-                        <input type="submit" value="Criar" name="action">
-                        <input type="submit" value="Atualizar" name="action">
-                        <input type="submit" value="Excluir" name="action">
-                    </div>
-                </div>
-            </form>
-            <br>
             <% if (produto && produto.msg) { %>
-                <div>
-                    <p><%= produto.msg %></p>
+                <div class="alert alert-danger mb-3 mt-3" role="alert">
+                    <%= produto.msg %>
                 </div>
             <% } %>
-            <br>
-            <% if (lst && lst.length > 0) { %>
-                <table>
-                    <thead><tr>
-                        <th>ID</th><th>NOME</th><th>PRECO</th><th>ESTOQUE</th>
-                    </tr></thead>
-                    <tbody>
-                <% lst.forEach(item => { %>
-                  <tr>
-                    <td><%= item.ID %></td>
-                    <td><%= item.NOME %></td>
-                    <td><%= item.PRECO %></td>
-                    <td><%= item.ESTOQUE %></td>
-                  </tr>
-                <% }); %>
-                    </tbody>
-                </table>
-              <% } %>
 
-        </div>
+            <div class="formC">
+                <div class="mb-3">
+                    <label class="form-label" for="id">ID</label>
+                    <input class="form-control" type="number" name="id" id="id" value="<%= produto.id ? produto.id : '' %>">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="nome">Nome</label>
+                    <input class="form-control" type="text" name="nome" id="nome" minlength="4" value="<%= produto.nome ? produto.nome : '' %>">
+                </div>
+
+                <div class="inputLst">
+                    <div class="mb-3">
+                        <label class="form-label" for="preco">Preço</label>
+                        <input class="form-control" type="number" min="0" name="preco" id="preco" value="<%= produto.preco ? produto.preco : '' %>">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="estoque">Estoque</label>
+                        <input class="form-control" type="number" min="0" step="1" name="estoque" id="estoque" value="<%= produto.estoque ? produto.estoque : '' %>">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Descrição do Produto</label>
+
+                    <textarea class="form-control" rows="3" name="description" id="description"><%= produto.description ? produto.description : '' %></textarea>
+                </div>
+                
+
+                <!-- Campo oculto para method-override -->
+                <input type="hidden" name="_method" id="method">
+
+                <div class="lstBtn">
+                    <input type="submit" value="Listar" name="action" class="btn btn-primary">
+                    <input type="submit" value="Buscar" name="action" class="btn btn-primary">
+                    <input type="submit" value="Criar" name="action" class="btn btn-success">
+                    <input type="submit" value="Atualizar" name="action" class="btn btn-secondary">
+                    <input type="submit" value="Excluir" name="action" class="btn btn-danger">
+                </div>
+            </div>
+        </form>
+
+        <br><hr><br>
+
+        <% if (lst && lst.length> 0) { %>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Estoque</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <% lst.forEach(item=> { %>
+                    <tr>
+                        <td>
+                            <%= item.ID %>
+                        </td>
+                        <td>
+                            <%= item.NOME %>
+                        </td>
+                        <td>
+                            <%= item.PRECO %>
+                        </td>
+                        <td>
+                            <%= item.ESTOQUE %>
+                        </td>
+                    </tr>
+                <% }); %>
+                </tbody>
+            </table>
+        <% } %>
     </div>
 
     <script>
@@ -298,5 +150,4 @@
         };
     </script>
 </body>
-
 </html>
